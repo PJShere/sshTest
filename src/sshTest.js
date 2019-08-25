@@ -11,13 +11,13 @@ module.exports = {
           stream
             .on('close', function(code, signal) {
               console.log(
-                'Stream :: close :: code: ' + code + ', signal: ' + signal,
+								// 'Stream :: close :: code: ' + code + ', signal: ' + signal,
               );
               conn.end();
             })
             .on('data', function(data) {
 							// console.log('STDOUT: ' + data);
-							console.log ('OK')
+							// console.log ('OK')
             })
             .stderr.on('data', function(data) {
               console.log('STDERR: ' + data);
