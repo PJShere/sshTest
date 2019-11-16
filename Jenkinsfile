@@ -3,7 +3,8 @@ pipeline {
     stages {
         stage('build version to package.json') {
             steps {
-			sh 'echo \\"$BUILD_NUMBER\\"'
+			sh 'sed -i \\"5s/\\\\\\"jenkins_build.*/\\\\\\"$BUILD_NUMBER\\\\\\*,/\\" ./package.json'
+			sh 'cat package.json'
                 }
             }
          }
