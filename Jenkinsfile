@@ -1,4 +1,4 @@
-pipeline 
+pipeline {
     stages {
         stage('build version to package.json') {
             steps {
@@ -11,3 +11,4 @@ pipeline
             }
          }
       }
+    }
