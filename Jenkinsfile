@@ -3,9 +3,7 @@ pipeline {
     stages {
         stage('build version to package.json') {
             steps {
-		      sh '''
-			    cat package.json
-			'''
+			sh 'echo \\"$BUILD_NUMBER\\"'
                 }
             }
          }
